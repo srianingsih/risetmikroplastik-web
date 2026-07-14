@@ -1,0 +1,784 @@
+/* ==========================================
+   1. RESET BASIC & GLOBAL STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+/* ==========================================
+   2. NAVBAR STYLES
+   ========================================== */
+.navbar {
+    background-color: #0077b6; /* Warna biru Google Sites */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    color: white;
+}
+
+.logo {
+    height: 45px;
+    background-color: white;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid white;
+}
+
+.search-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ==========================================
+   3. HERO BANNER STYLES
+   ========================================== */
+.hero {
+    background-image: url('assets/hero-bg.jpeg');
+    background-size: cover;
+    background-position: center 80%;
+    height: 320px;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   4. CARDS SECTION STYLES (HOME)
+   ========================================== */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Memastikan semua kartu punya tinggi sejajar */
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+}
+
+/* KUNCI PERBAIKAN: Pembungkus Link Card 1 agar Sejajar & Tanpa Garis Bawah */
+.card-link {
+    text-decoration: none !important;
+    color: inherit;
+    display: flex; /* Mengikuti struktur flex container utama */
+}
+
+.card-link:hover {
+    text-decoration: none !important;
+}
+
+.card-link * {
+    text-decoration: none !important; /* Menghapus garis bawah pada elemen di dalamnya */
+}
+
+.card {
+    background: white;
+    width: 200px;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek melayang saat di-hover */
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.card-arrow {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Kustomisasi Warna Judul Card */
+.text-blue { color: #0077b6; }
+.text-orange { color: #e63946; }
+.text-purple { color: #6a0572; }
+.text-green { color: #2a9d8f; }
+
+/* ==========================================
+   5. RESEARCH STORIES SECTION
+   ========================================== */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto 30px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b2545;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #0077b6;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.research-stories {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.story-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09);
+}
+
+.story-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-media {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-img {
+    width: 100%;
+    height: 240px; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 12px;
+}
+
+.img-align-left {
+    object-position: left center !important;
+}
+
+.img-fit {
+    object-fit: contain !important;
+    padding: 10px;
+    background-color: #f8fafc;
+}
+
+/* Badges & Buttons */
+.story-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.badge-warning { background-color: #fef3c7; color: #d97706; }
+.badge-danger { background-color: #fee2e2; color: #dc2626; }
+.badge-success { background-color: #dcfce7; color: #16a34a; }
+
+.story-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.story-desc {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #023e8a;
+    transform: translateX(3px);
+}
+
+/* Embed YouTube Poin 3 */
+.youtube-box {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-youtube {
+    display: inline-block;
+    background-color: #dc2626;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+}
+
+.btn-youtube:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   6. MODAL POPUP GALERI & FOTO TUNGGAL
+   ========================================== */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #ff4d4d;
+}
+
+.modal-nav {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.nav-btn {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background-color: #023e8a;
+}
+
+.img-counter {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   7. HALAMAN SIKLUS-PLASTIK.HTML
+   ========================================== */
+.page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-4px);
+}
+
+.siklus-intro-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 36px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eef2f6;
+    margin-bottom: 35px;
+}
+
+.siklus-text {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+.page-desc {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.siklus-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.table-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eef2f6;
+}
+
+.section-title-sub {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.full-table-img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   8. HALAMAN JENIS-MIKROPLASTIK.HTML (5 KOLOM SEJAJAR)
+   ========================================== */
+.jenis-header {
+    border-bottom: 2px dashed #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Mengatur 5 Kolom Sejajar dalam 1 Baris */
+.jenis-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 Kolom sejajar rata */
+    gap: 16px;                            /* Jarak ramping antar kartu */
+    margin-bottom: 40px;
+}
+
+.jenis-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.jenis-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Lingkaran/Persegi presisi */
+    max-height: 190px;   /* Mencegah gambar terlalu besar */
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.jenis-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.jenis-card:hover .jenis-img {
+    transform: scale(1.05);
+}
+
+/* Tombol Link Menuju Halaman HTML Detail */
+.btn-jenis-outline {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 6px;
+    background-color: #ffffff;
+    border: 1.5px solid #0284c7;
+    color: #0284c7;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important; /* Tanpa garis bawah */
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.btn-jenis-outline:hover {
+    background-color: #f0f9ff;
+    border-color: #0369a1;
+    color: #0369a1;
+}
+
+/* Penyesuaian Responsif Layar Kecil (Tablet & HP) */
+@media (max-width: 992px) {
+    .jenis-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .jenis-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
+   9. FOOTER STYLES
+   ========================================== */
+.site-footer {
+    background-color: #0b2545;
+    color: #e0e1dd;
+    padding-top: 50px;
+    font-size: 14px;
+    margin-top: 60px;
+    border-top: 4px solid #0077b6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr 0.8fr;
+    gap: 30px;
+    padding: 0 20px 40px 20px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.footer-text {
+    line-height: 1.6;
+    color: #a3cef1;
+    font-size: 13px;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.8px;
+    position: relative;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 35px;
+    height: 2px;
+    background-color: #00b4d8;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a3cef1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+.contact-item {
+    line-height: 1.6;
+    color: #a3cef1;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.email-item {
+    margin-top: 10px;
+    color: #00b4d8;
+    font-weight: 500;
+}
+
+.campus-col {
+    align-items: center;
+    text-align: center;
+}
+
+.campus-logo-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.campus-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.campus-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    background-color: #051923;
+    padding: 18px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #8d99ae;
+}
+
+.slogan {
+    color: #00b4d8;
+}
+
+/* ==========================================
+   10. MEDIA QUERIES (RESPONSIVE LAYOUT)
+   ========================================== */
+@media (max-width: 900px) {
+    .jenis-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-card, .story-card.reverse, .siklus-intro-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .detail-img {
+        max-height: none;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .bottom-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .jenis-grid {
+        grid-template-columns: 1fr;
+    }
+}
