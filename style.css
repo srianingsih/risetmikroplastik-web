@@ -1708,6 +1708,23 @@ body {
 /* ==========================================
    STYLING HALAMAN TIM PENELITI
    ========================================== */
+
+ .section-header {
+    text-align: center !important;
+    max-width: 800px;
+    margin: 35px auto 15px auto;
+    padding: 0 20px;
+}
+
+/* PAKSA JUDUL & DESKRIPSI KE TENGAH */
+.section-header .section-title,
+.section-header .section-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
